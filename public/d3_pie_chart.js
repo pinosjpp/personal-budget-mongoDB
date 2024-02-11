@@ -1,3 +1,14 @@
+d3.json("http://localhost:3000/budget", function(error, data) {
+    if (error) throw error;
+
+    
+    var transformedData = data.myBudget.map(function(item) {
+        return {label: item.title, value: item.budget};
+    });
+
+    change(transformedData);
+});
+
 var svg = d3.select("#d3Chart")
         .append("svg")
         .append("g");
@@ -39,14 +50,14 @@ var svg = d3.select("#d3Chart")
         .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
     // Assuming you have a static data array
-    var staticData = [
-        { "label": "Lorem ipsum", "value": 0.1 },
-        { "label": "dolor sit", "value": 0.2 },
-        { "label": "amet", "value": 0.3 },
-        // Add more data as needed
-    ];
+    // var staticData = [
+    //     { "label": "Lorem ipsum", "value": 0.1 },
+    //     { "label": "dolor sit", "value": 0.2 },
+    //     { "label": "amet", "value": 0.3 },
+    //     // Add more data as needed
+    // ];
 
-    change(staticData);
+    // change(staticData);
 
     function change(data) {
 

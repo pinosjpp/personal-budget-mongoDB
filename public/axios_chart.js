@@ -15,7 +15,11 @@ var dataSource = {
     ],
     labels: ['Eat out',
             'Rent',
-            'Groceries'
+            'Groceries',
+            'Cellphone',
+            'Gas',
+            'Insurance',
+            'Subscriptions'
     ]
 };
 
@@ -33,8 +37,8 @@ axios.get('http://localhost:3000/budget')
     for (var i = 0; i < res.data.myBudget.length; i++) {
         dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
         dataSource.labels[i] = res.data.myBudget[i].title;
-        createChart();
     }
+    createChart();
 });
 }
 
