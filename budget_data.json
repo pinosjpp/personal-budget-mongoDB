@@ -2,31 +2,38 @@
     "myBudget": [
       {
         "title": "Eat out",
-        "budget": 25
+        "budget": 25,
+        "colorCode": "#ffcd56"
       },
       {
         "title": "Rent",
-        "budget": 275
+        "budget": 275,
+        "colorCode": "#ff6384"
       },
       {
         "title": "Grocery",
-        "budget": 110
+        "budget": 110,
+        "colorCode": "#36a2eb"
       },
       {
         "title": "Cellphone",
-        "budget": 35
+        "budget": 35,
+        "colorCode": "#fd6b19"
       },
       {
         "title": "Gas",
-        "budget": 45
+        "budget": 45,
+        "colorCode": "#454545"
       },
       {
         "title": "Insurance",
-        "budget": 140
+        "budget": 140,
+        "colorCode": "#999999"
       },
       {
         "title": "Subscriptions",
-        "budget": 35
+        "budget": 35,
+        "colorCode": "#000000"
       }
     ]
   }

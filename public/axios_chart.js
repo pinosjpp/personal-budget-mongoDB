@@ -32,12 +32,14 @@ var myPieChart = new Chart(ctx, {
 }
 
 function getBudget() {
-axios.get('http://localhost:3000/budget')
-.then(function (res) {
-    for (var i = 0; i < res.data.myBudget.length; i++) {
+    var apiUrl = "/budget";
+    axios.get(apiUrl).then(function (res) {
+      for (var i = 0; i < res.data.myBudget.length; i++) {
         dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
         dataSource.labels[i] = res.data.myBudget[i].title;
-    }
+        dataSource.datasets[0].backgroundColor[i] =
+          res.data.myBudget[i].colorCode;
+      }
     createChart();
 });
 }
